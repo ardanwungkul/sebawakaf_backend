@@ -40,8 +40,8 @@ class PaymentController extends Controller
                 'amount' => $request->nominal,
                 'email' => $request->email,
                 'description' => $request->deskripsi,
-                'success_url' => 'http://localhost:5173/campaign/1',
-                'failed_url' => 'http://localhost:5173/campaign/1',
+                'success_url' => env('FRONTEND_URL') . '/campaign/1',
+                'failed_url' => env('FRONTEND_URL') . '/campaign/1',
             ]);
 
             $wakif->reference_id = $invoice->getId();
